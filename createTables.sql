@@ -30,6 +30,9 @@ CREATE TABLE Song (
 	FOREIGN KEY (Album_ID) REFERENCES Album(Album_ID) -- Foreign key restraint.
 );
 
+
+-- for zip code, use int instead of varchar
+
 CREATE TABLE Customer (
 	Customer_ID int PRIMARY KEY,
 	Customer_FName varchar(255) NOT NULL,
