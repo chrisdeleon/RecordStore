@@ -5,14 +5,14 @@ GO
 -- Creates all four tables needed for project.
 
 CREATE TABLE Artist (
-	Artist_ID int NOT NULL,
+	Artist_ID int UNIQUE NOT NULL,
 	Artist_FName varchar(255) NOT NULL,
 	Artist_LName varchar(255) NOT NULL,
 	PRIMARY KEY (Artist_ID)
 );
 
 CREATE TABLE Album(
-	Album_ID INT NOT NULL,
+	Album_ID INT UNIQUE NOT NULL,
 	Artist_ID int NOT NULL,
 	Album_Title varchar(255) NOT NULL,
 	Album_Published DATE DEFAULT '1901-01-01', -- Default value of Jan 1st 1901.
@@ -26,7 +26,7 @@ CREATE TABLE Album(
 );
 
 CREATE TABLE Song (
-	Song_ID int NOT NULL,
+	Song_ID int UNIQUE NOT NULL,
 	Album_ID int NOT NULL,
 	Song_Title varchar(255) NOT NULL,
 	PRIMARY KEY (Song_ID),
@@ -34,7 +34,7 @@ CREATE TABLE Song (
 );
 
 CREATE TABLE Customer (
-	Customer_ID int NOT NULL,
+	Customer_ID int UNIQUE NOT NULL,
 	Customer_FName varchar(255) NOT NULL,
 	Customer_LName varchar(255) NOT NULL,
 	CK_Email varchar(255) NOT NULL,
