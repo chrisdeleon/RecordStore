@@ -46,7 +46,7 @@ CREATE TABLE Customer (
 );
 
 
-
+-- Inserts all data for project.
 
 INSERT INTO Artist 
 VALUES (1, 'Bad', 'Bunny'), (2, 'Michael', 'Jackson'), (3, 'Stevie', 'Wonder'),
